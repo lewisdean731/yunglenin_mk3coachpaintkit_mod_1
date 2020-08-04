@@ -1,0 +1,86 @@
+local vec3 = require "vec3"
+local transf = require "transf"
+
+function data()
+
+return { 
+	type = "ASSET_TRACK",
+	description = {
+		name = _("BR Mk3 Coaches - yourlivery"),			
+		description = _("BR Mk3 Coaches as assets")
+	},
+	availability = {
+		yearFrom = 1975
+	},
+	buildMode = "MULTI",
+	categories = { "yunglenin" },
+	order = 1,
+	skipCollision = true,
+	autoRemovable = true,
+	params = { 
+		{key = "coachType",
+			name = _("Coach Type"),
+			values = { _("TS"),_("TS (Slide Door)"),_("TS (Plug Door)"),_("TF"),_("RFB"),_("SLEP") } 
+		},
+		{key = "livery",
+			name = _("Livery"),
+			values = { _("yourlivery") } 
+		},
+	},
+	updateFn = function(params)
+	
+	local result = {}
+		
+	result.models = {}
+	
+
+	if params.coachType == 0  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_so_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+		
+		
+	elseif params.coachType == 1  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_so_slide_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+	
+	
+	elseif params.coachType == 2  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_so_plug_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+	
+	
+	
+	elseif params.coachType == 3  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_fo_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+	
+	
+	
+	elseif params.coachType == 4  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_rfb_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+	
+	
+	
+	elseif params.coachType == 5  then
+		if params.livery == 0 then
+			result.models[#result.models+1] = { id = "vehicle/asset/mk3coach/mk3coach_yourlivery_sle_asset.mdl", transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1 } }
+		end
+	end
+	
+	result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+	} }
+	
+	return result
+	
+	end
+}
+
+end

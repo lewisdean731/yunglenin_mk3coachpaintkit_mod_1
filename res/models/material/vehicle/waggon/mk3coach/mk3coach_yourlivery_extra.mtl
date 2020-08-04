@@ -1,0 +1,85 @@
+function data()
+return {
+	order = 9,
+	params = {
+		albedo_scale = {
+			albedoScale = { 1, 1, 1, },
+		},
+		alpha_scale = {
+			alphaScale = 1,
+		},
+		alpha_test = {
+			alphaThreshold = 0.5,
+			cutout = false,
+		},
+		color_blend = {
+			albedoScales = { 1, },
+			colors = {
+				{ 0, 0, 0, },
+			},
+		},
+		dirt_rust = {
+			age = 0,
+			dirtColor = { 62/255, 58/255, 51/255 },
+			dirtOpacity = 5/100,
+			dirtScale = 128,
+		 
+			rustColor = { 89/255, 61/255, 38/255 },
+			rustOpacity = 50/100,
+			rustScale = 128,
+		},
+		fade_out_range = {
+			fadeOutEndDist = 20000,
+			fadeOutStartDist = 10000,
+		},
+		map_albedo_opacity = {
+			fileName = "models/vehicle/waggon/mk3coach/mk3coach_yourlivery_extra_albedo_opacity.tga",
+			type = "TWOD",
+		},
+		map_cblend_dirt_rust = {
+			fileName = "models/vehicle/waggon/mk3coach/mk3coach_brblue_extra_colour_dirt_rust.dds",
+			type = "TWOD",
+		},
+		map_dirt = {
+			fileName = "models/vehicle/dirt_albedo.dds",
+			type = "TWOD",
+		},
+		map_dirt_normal = {
+			fileName = "models/vehicle/dirt_normal.dds",
+			redGreen = true,
+			type = "TWOD",
+		},
+		map_metal_gloss_ao = {
+			fileName = "models/vehicle/waggon/mk3coach/mk3coach_brblue_extra_metal_gloss_ao.dds",
+			type = "TWOD",
+		},
+		map_normal = {
+			fileName = "models/vehicle/waggon/mk3coach/mk3coach_brblue_extra_normal.dds",
+			redGreen = true,
+			type = "TWOD",
+		},
+		map_rust = {
+			fileName = "models/vehicle/rust_albedo.dds",
+			type = "TWOD",
+		},
+		map_rust_normal = {
+			fileName = "models/vehicle/rust_normal.dds",
+			redGreen = true,
+			type = "TWOD",
+		},
+		normal_scale = {
+			normalScale = 1,
+		},
+		polygon_offset = {
+			factor = 0,
+			forceDepthWrite = false,
+			units = 0,
+		},
+		two_sided = {
+			flipNormal = false,
+			twoSided = false,
+		},
+	},
+	type = "PHYS_TRANSPARENT_NRML_MAP_CBLEND_DIRT",
+}
+end
